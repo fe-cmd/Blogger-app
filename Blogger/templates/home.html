@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TECH BLOG</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+crossorigin="anonymous"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" 
+rel="stylesheet"
+/>
+</head>
+<body>
+
+ <style>
+ /*=== MEDIA QUERY ===*/
+ @import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900");
+ *  {
+    box-sizing: border-box;
+  }
+
+  /*! =======================================================
+                      VERSION  9.9.0              
+========================================================= */
+/*! =========================================================
+ * bootstrap-slider.js
+ *
+ * Maintainers:
+ *		Kyle Kemp
+ *			- Twitter: @seiyria
+ *			- Github:  seiyria
+ *		Rohit Kalkur
+ *			- Twitter: @Rovolutionary
+ *			- Github:  rovolution
+ *
+ * =========================================================
+  *
+ * bootstrap-slider is released under the MIT License
+ * Copyright (c) 2017 Kyle Kemp, Rohit Kalkur, and contributors
+ * 
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ /* ========================================================= */
+ .slider{display:inline-block;vertical-align:middle;position:relative}.slider.slider-horizontal{width:210px;height:20px}.slider.slider-horizontal .slider-track{height:10px;width:100%;margin-top:-5px;top:50%;left:0}.slider.slider-horizontal .slider-selection,.slider.slider-horizontal .slider-track-low,.slider.slider-horizontal .slider-track-high{height:100%;top:0;bottom:0}.slider.slider-horizontal .slider-tick,.slider.slider-horizontal .slider-handle{margin-left:-10px}.slider.slider-horizontal .slider-tick.triangle,.slider.slider-horizontal .slider-handle.triangle{position:relative;top:50%;transform:translateY(-50%);border-width:0 10px 10px 10px;width:0;height:0;border-bottom-color:#2e6da4;margin-top:0}.slider.slider-horizontal .slider-tick-container{white-space:nowrap;position:absolute;top:0;left:0;width:100%}.slider.slider-horizontal .slider-tick-label-container{white-space:nowrap;margin-top:20px}.slider.slider-horizontal .slider-tick-label-container .slider-tick-label{padding-top:4px;display:inline-block;text-align:center}.slider.slider-horizontal.slider-rtl .slider-track{left:initial;right:0}.slider.slider-horizontal.slider-rtl .slider-tick,.slider.slider-horizontal.slider-rtl .slider-handle{margin-left:initial;margin-right:-10px}.slider.slider-horizontal.slider-rtl .slider-tick-container{left:initial;right:0}.slider.slider-vertical{height:210px;width:20px}.slider.slider-vertical .slider-track{width:10px;height:100%;left:25%;top:0}.slider.slider-vertical .slider-selection{width:100%;left:0;top:0;bottom:0}.slider.slider-vertical .slider-track-low,.slider.slider-vertical .slider-track-high{width:100%;left:0;right:0}.slider.slider-vertical .slider-tick,.slider.slider-vertical .slider-handle{margin-top:-10px}.slider.slider-vertical .slider-tick.triangle,.slider.slider-vertical .slider-handle.triangle{border-width:10px 0 10px 10px;width:1px;height:1px;border-left-color:#2e6da4;border-right-color:#2e6da4;margin-left:0;margin-right:0}.slider.slider-vertical .slider-tick-label-container{white-space:nowrap}.slider.slider-vertical .slider-tick-label-container .slider-tick-label{padding-left:4px}.slider.slider-vertical.slider-rtl .slider-track{left:initial;right:25%}.slider.slider-vertical.slider-rtl .slider-selection{left:initial;right:0}.slider.slider-vertical.slider-rtl .slider-tick.triangle,.slider.slider-vertical.slider-rtl .slider-handle.triangle{border-width:10px 10px 10px 0}.slider.slider-vertical.slider-rtl .slider-tick-label-container .slider-tick-label{padding-left:initial;padding-right:4px}.slider.slider-disabled .slider-handle{background-image:-webkit-linear-gradient(top,#dfdfdf 0,#bebebe 100%);background-image:-o-linear-gradient(top,#dfdfdf 0,#bebebe 100%);background-image:linear-gradient(to bottom,#dfdfdf 0,#bebebe 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdfdfdf',endColorstr='#ffbebebe',GradientType=0)}.slider.slider-disabled .slider-track{background-image:-webkit-linear-gradient(top,#e5e5e5 0,#e9e9e9 100%);background-image:-o-linear-gradient(top,#e5e5e5 0,#e9e9e9 100%);background-image:linear-gradient(to bottom,#e5e5e5 0,#e9e9e9 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe5e5e5',endColorstr='#ffe9e9e9',GradientType=0);cursor:not-allowed}.slider input{display:none}.slider .tooltip.top{margin-top:-36px}.slider .tooltip-inner{white-space:nowrap;max-width:none}.slider .hide{display:none}.slider-track{position:absolute;cursor:pointer;background-image:-webkit-linear-gradient(top,#f5f5f5 0,#f9f9f9 100%);background-image:-o-linear-gradient(top,#f5f5f5 0,#f9f9f9 100%);background-image:linear-gradient(to bottom,#f5f5f5 0,#f9f9f9 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5',endColorstr='#fff9f9f9',GradientType=0);-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);border-radius:4px}.slider-selection{position:absolute;background-image:-webkit-linear-gradient(top,#f9f9f9 0,#f5f5f5 100%);background-image:-o-linear-gradient(top,#f9f9f9 0,#f5f5f5 100%);background-image:linear-gradient(to bottom,#f9f9f9 0,#f5f5f5 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9',endColorstr='#fff5f5f5',GradientType=0);-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:4px}.slider-selection.tick-slider-selection{background-image:-webkit-linear-gradient(top,#8ac1ef 0,#82b3de 100%);background-image:-o-linear-gradient(top,#8ac1ef 0,#82b3de 100%);background-image:linear-gradient(to bottom,#8ac1ef 0,#82b3de 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8ac1ef',endColorstr='#ff82b3de',GradientType=0)}.slider-track-low,.slider-track-high{position:absolute;background:transparent;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:4px}.slider-handle{position:absolute;top:0;width:20px;height:20px;background-color:#337ab7;background-image:-webkit-linear-gradient(top,#337ab7 0,#2e6da4 100%);background-image:-o-linear-gradient(top,#337ab7 0,#2e6da4 100%);background-image:linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7',endColorstr='#ff2e6da4',GradientType=0);filter:none;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);border:0 solid transparent}.slider-handle.round{border-radius:50%}.slider-handle.triangle{background:transparent none}.slider-handle.custom{background:transparent none}.slider-handle.custom::before{line-height:20px;font-size:20px;content:'\2605';color:#726204}.slider-tick{position:absolute;width:20px;height:20px;background-image:-webkit-linear-gradient(top,#f9f9f9 0,#f5f5f5 100%);background-image:-o-linear-gradient(top,#f9f9f9 0,#f5f5f5 100%);background-image:linear-gradient(to bottom,#f9f9f9 0,#f5f5f5 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9',endColorstr='#fff5f5f5',GradientType=0);-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;filter:none;opacity:.8;border:0 solid transparent}.slider-tick.round{border-radius:50%}.slider-tick.triangle{background:transparent none}.slider-tick.custom{background:transparent none}.slider-tick.custom::before{line-height:20px;font-size:20px;content:'\2605';color:#726204}.slider-tick.in-selection{background-image:-webkit-linear-gradient(top,#8ac1ef 0,#82b3de 100%);background-image:-o-linear-gradient(top,#8ac1ef 0,#82b3de 100%);background-image:linear-gradient(to bottom,#8ac1ef 0,#82b3de 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8ac1ef',endColorstr='#ff82b3de',GradientType=0);opacity:1}
+
+  .navbar {
+    background: #2e6da4;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.contain {
+      background-color: white;
+      color: blue;
+  }
+
+  .pack {
+      background-color: #2e6da4;    
+      color: #fff;
+      text-shadow: 3px, 0px, -6px rgb(182, 108, 108);
+  }
+
+  .pack h1{
+    text-shadow: 3px, 0px, -6px rgb(182, 108, 108); 
+  }
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: #fff;
+    background-image: linear-gradient(to top,#fff 0%,rgb(243, 239, 239) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-cogs {
+    margin-right: 0.5rem;
+    height: auto;
+} 
+
+.contain {
+      background-color: white;
+      color: blue;
+      border: 2px solid blue;
+      border-radius: 10px;
+  }
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.navbar__btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+}
+
+.button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #4837ff;
+    color: #fff;
+}
+
+.button1:hover {
+    background: #f77062;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover{
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 960px) {
+  .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      padding: 0;
+  }
+
+  .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 0;
+      transition: all 0.5s ease;
+      height: 50vh;
+      z-index: -1;
+      background: #131313;
+  }
+
+  .navbar__menu.active {
+      background: #2e6da4;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 90vh;
+      font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+      padding-left: 25px;
+  }
+
+  .contain {
+      background-color: white;
+      color: blue;
+      height: 100vh;
+  }
+
+  .pack {
+      background-color: #2e6da4;    
+      color: #fff;
+      text-shadow: 3px, 0px, -6px rgb(182, 108, 108);
+  }
+
+  .navbar__toggle .bar { 
+      width: 25px;
+      height: 5px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #fff;
+  }
+
+  .navbar__item {
+      width: 100%;
+  }
+
+  .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+  }
+  
+  #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+  }
+  
+  .navbar__btn {
+      padding-bottom: 2rem;
+  }
+
+  .navbar__btn1 {
+      padding-bottom: 2rem;
+  }
+
+  .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+      
+  }
+
+  .button1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+      
+  }
+
+  .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  } 
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+
+  
+}
+  
+/* Add a gray background color with some padding */
+  .button-home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 50px;
+      margin: 0;
+      background-color: #f77062;
+      color: white;
+      border-radius: 10px;
+      margin-left: 45%;
+  } 
+
+  .button-home:hover {
+      background-color: #2e6da4;
+      color: #fff;
+  }
+
+  .appre a {
+      text-decoration: none;
+  }
+
+  .appre h1 {
+      text-align: center;
+      color: #2e6da4;
+  }
+
+  .appre h2 {
+    text-align: center;
+      color: #2e6da4;
+      background-color: #f77062; 
+  }
+
+
+
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+
+  .col-sm-12-col-lg-4 {
+       border-radius: 10px;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa; 
+    width: 70%;
+    padding: 15px, 20px, 15px, 20px;
+    border: 3px solid blue;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+     border-radius: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
+  .footer__container {
+    background-color: #2e6da4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.footer1__container {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#ff0844 0%,#ffb1 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display:flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+
+.footer__link--items > h2 {
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+    color: #e9e9e9;
+    transition: 0.3s ease-out;
+}
+
+/* social icons */
+
+
+.social__media {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+.social__logo {
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.website__right {
+    color: #fff;
+}
+
+@media screen and (max-width:820px) {
+    .footer__links {
+        padding-top: 2rem;
+    }
+
+    #footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .website__right {
+        margin-bottom: 2rem;
+    }
+
+    .footer__link--wrapper {
+        flex-direction: column;
+    }
+
+    .social__media--wrap {
+        flex-direction: column;
+    }
+}
+
+.fa-cog:after {
+   position: absolute; 
+   content: '';
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: #2e6da4;
+   transition: all 0.35s;
+   border-radius: 4px;
+   color: #f77062;
+}
+.fa-cog:hover:after {
+    width: 100%;
+    color: white;
+}
+
+.fa-cog {
+    font-size: 1rem;
+    background-image: #2e6da4;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    margin-left: 45%;
+    font-size: 100px;
+}
+@media screen and (max-width:480px) {
+   .footer__link--items {
+       margin: 0;
+       padding: 10px;
+       width: 100%;
+   } 
+}
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .button-home {
+      margin-left: 25%;
+  }
+
+  .fa-cog {
+      margin-left: 30%;
+  }
+
+  }
+
+ </style> 
+
+
+<!--Navbar section-->
+{% csrf_token %}
+<nav class="navbar" id="header">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo"><i class="fas fa-cogs"></i>JETS <br/>BLOG</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="home" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="begin" class="navbar__links">Blog</a>
+            </li>
+            <li class="navbar__item">
+                <a href="contact" class="navbar__links scrollto">Contacts</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="login" class="button">Signup/Login</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="login" class="button1">Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav><br><br>
+
+ <div class="contain">
+    <div class="main">
+        <div class="pack">
+    <marquee direction="right"><h1>Welcome to <span>JET-BLOGS</span></h1></marquee>
+    <marquee direction="left"><h2>view your most trusted technology inspiring blogs of all times</h2></marquee><br>
+    <i class="fas fa-cog"></i>
+</div><br><br>
+    <div class="main__img--container">
+        <img src="./images/pic1.svg" alt="pic" id="main__img">
+        <p>a blog insight on why people later get tired programming</p>
+    </div>
+    <div class="main__img--container">
+        <img src="./images/pic1.svg" alt="pic" id="main__img">
+        <p>tips to become a better programmer</p>
+    </div>
+    <div class="main__img--container">
+        <img src="./images/pic1.svg" alt="pic" id="main__img">
+        <p>how you can become a  programmer</p>
+    </div>
+    <div class="main__img--container">
+        <img src="./images/pic1.svg" alt="pic" id="main__img">
+        <p>career aspect field in computer programming</p>
+    </div>
+    <div class="main__img--container">
+        <img src="./images/pic1.svg" alt="pic" id="main__img">
+        <p>how & where to begin your journey to becoming a computer programmer</p>
+    </div>
+</div></div><br><br><br>
+<div class="row">
+        <!-- offer 01 -->
+        <div class="col-lg-12">
+            <div class="trending-ads-slide">
+                <div class="col-sm-12-col-lg-4">
+                    <!-- product card -->
+<div class="product-item bg-light">
+<div class="card">
+    <div class="thumb-content">
+        <!-- <div class="price">$200</div> -->
+        <a href="single.html">
+            <img class="card-img-top img-fluid" src="images/products/products-1.jpg" alt="Card image cap">
+        </a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><a href="single.html">a blog insight on why people later get tired programming</a></h4>
+        <ul class="list-inline product-meta">
+            <li class="list-inline-item">
+                <a href="single.html"><i class="fa fa-folder-open-o"></i>blogger</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#"><i class="fa fa-calendar"></i>10 January</a>
+            </li>
+        </ul>
+        <p class="card-text">These below are the rate of our blogs globally.</p>
+        <div class="product-ratings">
+            <ul class="list-inline">
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+                </div>
+                <div class="col-sm-12-col-lg-4">
+                    <!-- product card -->
+<div class="product-item bg-light">
+<div class="card">
+    <div class="thumb-content">
+        <!-- <div class="price">$200</div> -->
+        <a href="single.html">
+            <img class="card-img-top img-fluid" src="images/products/products-1.jpg" alt="Card image cap">
+        </a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><a href="single.html">tips to become a better programmer</a></h4>
+        <ul class="list-inline product-meta">
+            <li class="list-inline-item">
+                <a href="single.html"><i class="fa fa-folder-open-o"></i>blogger</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#"><i class="fa fa-calendar"></i>11 January</a>
+            </li>
+        </ul>
+        <p class="card-text">These below are the rate of our blogs globally.</p>
+        <div class="product-ratings">
+            <ul class="list-inline">
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+                </div>
+<div class="col-sm-12-col-lg-4">
+                    <!-- product card -->
+<div class="product-item bg-light">
+<div class="card">
+    <div class="thumb-content">
+        <!-- <div class="price">$200</div> -->
+        <a href="single.html">
+            <img class="card-img-top img-fluid" src="images/products/products-1.jpg" alt="Card image cap">
+        </a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><a href="single.html">how you can become a  programmer</a></h4>
+        <ul class="list-inline product-meta">
+            <li class="list-inline-item">
+                <a href="single.html"><i class="fa fa-folder-open-o"></i>blogger</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#"><i class="fa fa-calendar"></i>12 January</a>
+            </li>
+        </ul>
+        <p class="card-text">These below are the rate of our blogs globally.</p>
+        <div class="product-ratings">
+            <ul class="list-inline">
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+                </div>
+                <div class="col-sm-12-col-lg-4">
+                    <!-- product card -->
+<div class="product-item bg-light">
+<div class="card">
+    <div class="thumb-content">
+        <!-- <div class="price">$200</div> -->
+        <a href="single.html">
+            <img class="card-img-top img-fluid" src="images/products/products-1.jpg" alt="Card image cap">
+        </a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><a href="single.html">career aspect field in computer programming</a></h4>
+        <ul class="list-inline product-meta">
+            <li class="list-inline-item">
+                <a href="single.html"><i class="fa fa-folder-open-o"></i>blogger</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#"><i class="fa fa-calendar"></i>11 January</a>
+            </li>
+        </ul>
+        <p class="card-text">These below are the rate of our blogs globally.</p>
+        <div class="product-ratings">
+            <ul class="list-inline">
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+                </div>
+                <div class="col-sm-12-col-lg-4">
+                    <!-- product card -->
+<div class="product-item bg-light">
+<div class="card">
+    <div class="thumb-content">
+        <!-- <div class="price">$200</div> -->
+        <a href="single.html">
+            <img class="card-img-top img-fluid" src="images/products/products-1.jpg" alt="Card image cap">
+        </a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><a href="single.html">how & where to begin your journey to becoming a computer programmer</a></h4>
+        <ul class="list-inline product-meta">
+            <li class="list-inline-item">
+                <a href="single.html"><i class="fa fa-folder-open-o"></i>blogger</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#"><i class="fa fa-calendar"></i>11 January</a>
+            </li>
+        </ul>
+        <p class="card-text">These below are the rate of our blogs globally.</p>
+        <div class="product-ratings">
+            <ul class="list-inline">
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+                </div>                
+
+<br><br><br>
+  
+<div class="appre">
+    <h1>
+   Thanks for accessing my home blog page </h1>
+   <h2>to know about my blog, press the button below 
+    to proceed <i class="fas fa-point"></i></h2>
+    <a href="begin"><button class="button-home">Click!</button></a>
+</div><br><br>
+
+
+<!--footer section-->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>About the developer</h2>
+                <a href="/sign__up">How it works</a>
+                <a href="/">Testimonials</a>
+                <a href="/">Careers</a>
+                <a href="/">Contact</a>
+                <a href="/">Terms of service</a>
+            </div>
+            <div class="footer__link--items">
+               <h2>Developer Contact</h2>
+               <a href="/">Contact</a>
+               <a href="/">Support</a>
+               <a href="/">Help</a>
+               <a href="/">Destinations</a>
+               <a href="/">Quotes</a>
+           </div>
+        </div>
+        <div class="footer__link--wrapper">
+           <div class="footer__link--items">
+               <h2>Videos</h2>
+               <a href="/">Submit Video</a>
+               <a href="/">Ambassadors</a>
+               <a href="/">Influencer</a>
+               <a href="/">Agency</a>
+           </div>
+           <div class="footer__link--items">
+              <h2>Social Media</h2>
+              <a href="/">Instagram</a>
+              <a href="/">Facebook</a>
+              <a href="/">Twitter</a>
+              <a href="/">linkedin</a>
+              <a href="/">Telegram</a>
+              <a href="/">Whatsapp</a>
+          </div>
+       </div>
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo"><i class="fas 
+                fa-cogs"></i>JETS <br/>BLOG</a>
+            </div>
+            <P class="website__right">&copykJETS BLOG 2021. All rights
+            reserved</P>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                   <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                   <i class="fab fa-twitter"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                   <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                   <i class="fab fa-telegram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                   <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                   <i class="fab fa-youtube"></i>
+                </a>
+           </div>
+        </div>
+    </div>
+   </div>
+  
+  <script>
+     const menu = document.querySelector('#mobile-menu');
+     const menuLinks = document.querySelector('.navbar__menu');
+  
+     menu.addEventListener('click', function() {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+  
+  });
+
+     // trending-ads-slide 
+
+  $('.trending-ads-slide').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 800,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+  </script>
+  </body>
+  </html>
+  
